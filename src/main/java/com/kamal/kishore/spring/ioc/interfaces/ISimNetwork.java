@@ -14,4 +14,6 @@ public interface ISimNetwork {
      * Use Phone Internet
      */
     void useInternet();
+
+    String toString();
 }

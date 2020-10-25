@@ -3,5 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id = "simNetwork" class="main.java.com.kamal.kishore.spring.ioc.interfaces.impl.AirtelNetwork"/>
+    <bean id = "airtelNetwork" class="main.java.com.kamal.kishore.spring.ioc.interfaces.impl.AirtelNetwork">
+        <property name="id" value="1"></property>
+        <property name="name" value="Airtel"></property>
+    </bean>
+
+
+    <bean id = "vodafoneNetwork" class="main.java.com.kamal.kishore.spring.ioc.interfaces.impl.VodafoneNetwork">
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="name" value="Vodafone"></constructor-arg>
+    </bean>
 </beans>

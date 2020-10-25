@@ -9,9 +9,19 @@ public class SpringIocApplication {
         System.out.println(("Application loading..."));
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         System.out.println(("..................Application Loaded............."));
-        ISimNetwork simNetwork = applicationContext.getBean("simNetwork", ISimNetwork.class);
-        simNetwork.makeCall();
-        simNetwork.useInternet();
+
+        /*
+        Setter Injection
+         */
+        ISimNetwork airtelNetwork = applicationContext.getBean("airtelNetwork", ISimNetwork.class);
+        System.out.println(("..................Setter Injection.................:: " + airtelNetwork));
+
+        /*
+        Constructor Injection
+         */
+
+        ISimNetwork vodafoneNetowrk = applicationContext.getBean("vodafoneNetwork", ISimNetwork.class);
+        System.out.println(("..................Constructor Injection............:: " + vodafoneNetowrk));
 
     }
 }
