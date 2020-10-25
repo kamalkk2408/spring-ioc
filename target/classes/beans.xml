@@ -3,14 +3,24 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id = "airtelNetwork" class="main.java.com.kamal.kishore.spring.ioc.interfaces.impl.AirtelNetwork">
+    <bean id = "airtelNetwork" class="main.java.com.kamal.kishore.spring.ioc.sim.impl.AirtelNetwork">
         <property name="id" value="1"></property>
         <property name="name" value="Airtel"></property>
+        <property name="appStores" ref="googlePlayStore"></property>
+        <property name="apps">
+            <bean class="main.java.com.kamal.kishore.spring.ioc.apps.impl.AirtelMoney"></bean>
+        </property>
     </bean>
 
 
-    <bean id = "vodafoneNetwork" class="main.java.com.kamal.kishore.spring.ioc.interfaces.impl.VodafoneNetwork">
+    <bean id = "vodafoneNetwork" class="main.java.com.kamal.kishore.spring.ioc.sim.impl.VodafoneNetwork">
         <constructor-arg name="id" value="2"></constructor-arg>
         <constructor-arg name="name" value="Vodafone"></constructor-arg>
+        <property name="appStores" ref="googlePlayStore"></property>
+        <property name="apps">
+            <bean class="main.java.com.kamal.kishore.spring.ioc.apps.impl.VodafonePlay"></bean>
+        </property>
     </bean>
+
+    <bean id = "googlePlayStore" class="main.java.com.kamal.kishore.spring.ioc.appstores.impl.GooglePlayStore"></bean>
 </beans>
