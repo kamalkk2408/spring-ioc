@@ -1,6 +1,6 @@
 package main.java.com.kamal.kishore.spring.ioc;
 
-import main.java.com.kamal.kishore.spring.ioc.interfaces.ISimNetwork;
+import main.java.com.kamal.kishore.spring.ioc.sim.ISimNetwork;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
