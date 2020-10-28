@@ -30,7 +30,7 @@
 
     <bean id = "googlePlayStore" class="main.java.com.kamal.kishore.spring.ioc.appstores.impl.GooglePlayStore"></bean>
 
-    <bean id = "samsungPhone" class ="main.java.com.kamal.kishore.spring.ioc.phone.impl.SamsungPhone" autowire="byName">
+    <bean id = "samsungPhone" class ="main.java.com.kamal.kishore.spring.ioc.phone.impl.SamsungPhone">
     </bean>
     <bean id = "onePlusPhone" class="main.java.com.kamal.kishore.spring.ioc.phone.impl.OnePlusPhone"></bean>
 </beans>
