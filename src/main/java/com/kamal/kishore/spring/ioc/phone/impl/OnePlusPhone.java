@@ -5,6 +5,7 @@ import main.java.com.kamal.kishore.spring.ioc.phone.ISmartPhone;
 import main.java.com.kamal.kishore.spring.ioc.sim.ISimNetwork;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Objects;
 
@@ -15,6 +16,7 @@ public class OnePlusPhone implements ISmartPhone {
     @Qualifier("vodafoneNetwork")
     ISimNetwork simNetwork;
 
+    @Value("${phone.onePlus}")
     String name;
 
     @Override
